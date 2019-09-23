@@ -1,0 +1,154 @@
+---
+title: "Mini HW 2-1: Getting started with data transformation"
+author: "Your Name"
+date: "Today's date"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Due Saturday, September 28 @ 11:59pm through Github**
+
+Your next assignment is to practice the 6 `dplyr` functions so that you are comfortable using them.  See how many of these different tasks you can complete in your 30 minutes.  For the first set of tasks, I will tell you which functions to use.  For the second set of tasks, you must determine the right function yourself!
+
+As a reminder, the 6 functions are:
+
+* `filter()` allows us to choose *observations* by their values; useful for defining subsets of the data that meet certain criteria
+* `arrange()` allows us to order rows in the data based on some criteria
+* `select()` allows us to choose *variables* from the dataset
+* `mutate()` allows us to create new variables out of existing variables
+* `summarize()` allows us to collapse values into a summary, such as collapsing individual values of a variable into the mean value or the sum of the values
+* `group_by()` allows us to perform any of the previous 5 function on a group-by-group basis, for example summarizing to calculate a mean value for each group
+
+___
+
+**Work through the following items:**
+
+(1) Knit this document.  Then edit the YAML header of this `.Rmd` file to include your name and today's date.  Knit the document again and be sure your changes are reflected in the updated output!
+
+(2) Load the `tidyverse` so you can work with `dplyr`:
+```{r}
+library(tidyverse)
+```
+
+(3) Load the `nmes.data` object stored in the `nmes2018.rda` file:
+```{r}
+load("nmes2018.rda")
+```
+
+(4) Use the specified functions to complete the tasks below:
+
+* Use `filter()` to find all individuals who are college graduates.
+```{r}
+
+```
+
+* Use `filter()` to find all college graduates with medical expenditures about $5000.
+```{r}
+
+```
+
+* Use `filter()` to find all individuals who have been diagnosed with lung cancer (`lc5`) **or** coronary heart disease (`chd5`).
+```{r}
+
+```
+
+* Use `arrange()` to sort the dataset to find the oldest person.
+```{r}
+
+```
+
+* Use `arrange()` to sort the dataset to find the smoker (`eversmk`) with the lowest BMI.
+```{r}
+
+```
+
+* Use `select()` to select only the disease variables (`lc5`, `chd5`, `mscd`)
+```{r}
+
+```
+
+* Use `select()` to remove the `ageCat` variable.
+```{r}
+
+```
+
+* Use `select()` to make the order of the variables `id`, `totalexp`, `mscd`, and then everything else.
+```{r}
+
+```
+
+* Use `mutate()` to create a new variable called `log10exp` that has an individual's log10 medical expenditures.
+```{r}
+
+```
+
+* Use `mutate()` to create a new variable called `elderly` that tells whether an individual is 65 or older.
+```{r}
+
+```
+
+* Use `group_by()` and `summarize()` to find the number of people, mean, and median medical expenditures for those who have and don't have a major smoking-caused disease (`mscd`).
+```{r}
+
+```
+
+* Use `group_by()` and `summarize()` to find the number of people, mean, and median BMIs for those who have and haven't ever smoked (`eversmk`).
+```{r}
+
+```
+
+
+(5) Complete the tasks below:
+
+* Find all individuals who have a major smoking-caused disease.
+```{r}
+
+```
+
+* Find the youngest person with a major smoking-caused disease.
+```{r}
+
+```
+
+* Create a dataset with only those variables related to the socioeconomic variables of (income, education, occupation)
+```{r}
+
+```
+
+* Compare the mean and median medical expenditures between those who have and haven't ever smoked
+```{r}
+
+```
+
+* Compare the minimum and maximum medical expenditures between those who are poor and those who are not.
+```{r}
+
+```
+
+* Create a new variable to tell whether an individual is underweight (BMI < 18.5)
+```{r}
+
+```
+
+* Find the number of individuals in each of the education groups.
+```{r}
+
+```
+
+
+(6) When you are finished with yoru assignment, knit the file again!  If your document successfully knit without error, you are ready to submit your assignment through Github.  To do so, follow the steps below.  (If your document didn't successfully knit, please reach out to me over email at `phbiostats@jhu.edu` so I can help you trouble-shoot the issue.)
+
+* First you need to **commit** the changes you've made to the document.  Click the colorful Git button at the top of the RStudio window and select "Commit" from the menu.
+* In the window that opens, **stage** your changes by clicking the check boxes next to the `Mini0-1.Rmd` and `Mini0-1.html` files.
+* In the "Commit message" box, type a short description of what changes you've made, something like: `Completed assignment`
+* Click the "Commit" button on the bottom right.
+* You'll see a window that will tell you about the changes that you've made.  Click "Close" to close the window.  You've successfully committed! You can close this commit window now.
+* After committing, you must **push** your changes to the repository on Github.  Do this by clicking the colorful Git button again and select "Push Branch".  
+* Again, you'll see a window open that tells you your changes have been pushed!
+* If you want, you can look at your repository on [Github.com](https://github.com/) and should be able to see your changes there!  
+* You've successfully submitted your assignment :)
+
+
