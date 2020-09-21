@@ -9,18 +9,16 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Due Saturday, September 28 @ 11:59pm through Github**
+**Due Sunday, September 27 @ 11:59pm through Github**
 
-Your next assignment is to practice the 6 `dplyr` functions so that you are comfortable using them.  See how many of these different tasks you can complete in your 30 minutes.  For the first set of tasks, I will tell you which functions to use.  For the second set of tasks, you must determine the right function yourself!
+Your next assignment is to practice the first 4 `dplyr` functions so that you are comfortable using them.  See how many of these different tasks you can complete in your max 1 hour of work on this assignment.  For the first set of tasks, I will tell you which functions to use.  For the second set of tasks, you must determine the right function yourself!
 
-As a reminder, the 6 functions are:
+As a reminder, the 4 functions we've seen so far are:
 
 * `filter()` allows us to choose *observations* by their values; useful for defining subsets of the data that meet certain criteria
 * `arrange()` allows us to order rows in the data based on some criteria
 * `select()` allows us to choose *variables* from the dataset
 * `mutate()` allows us to create new variables out of existing variables
-* `summarize()` allows us to collapse values into a summary, such as collapsing individual values of a variable into the mean value or the sum of the values
-* `group_by()` allows us to perform any of the previous 5 function on a group-by-group basis, for example summarizing to calculate a mean value for each group
 
 ___
 
@@ -45,7 +43,7 @@ load("nmes2018.rda")
 
 ```
 
-* Use `filter()` to find all college graduates with medical expenditures about $5000.
+* Use `filter()` to find all college graduates with medical expenditures above $5000.
 ```{r}
 
 ```
@@ -55,12 +53,12 @@ load("nmes2018.rda")
 
 ```
 
-* Use `arrange()` to sort the dataset to find the oldest person.
+* Use `arrange()` to sort the dataset to put the oldest person first.
 ```{r}
 
 ```
 
-* Use `arrange()` to sort the dataset to find the smoker (`eversmk`) with the lowest BMI.
+* Use `arrange()` to sort the dataset to put the smoker (`eversmk`) with the lowest BMI first.
 ```{r}
 
 ```
@@ -80,22 +78,17 @@ load("nmes2018.rda")
 
 ```
 
-* Use `mutate()` to create a new variable called `log10exp` that has an individual's log10 medical expenditures.
+* Use `rename()` to change the name of the `educate` variable to `education_level`.
+```{r}
+
+```
+
+* Use `mutate()` to create a new variable called `log10exp` that contains an individual's log10 medical expenditures.
 ```{r}
 
 ```
 
 * Use `mutate()` to create a new variable called `elderly` that tells whether an individual is 65 or older.
-```{r}
-
-```
-
-* Use `group_by()` and `summarize()` to find the number of people, mean, and median medical expenditures for those who have and don't have a major smoking-caused disease (`mscd`).
-```{r}
-
-```
-
-* Use `group_by()` and `summarize()` to find the number of people, mean, and median BMIs for those who have and haven't ever smoked (`eversmk`).
 ```{r}
 
 ```
@@ -118,22 +111,12 @@ load("nmes2018.rda")
 
 ```
 
-* Compare the mean and median medical expenditures between those who have and haven't ever smoked
-```{r}
-
-```
-
-* Compare the minimum and maximum medical expenditures between those who are poor and those who are not.
-```{r}
-
-```
-
 * Create a new variable to tell whether an individual is underweight (BMI < 18.5)
 ```{r}
 
 ```
 
-* Find the number of individuals in each of the education groups.
+* Find the youngest individual in each of the education groups.
 ```{r}
 
 ```
@@ -142,7 +125,7 @@ load("nmes2018.rda")
 (6) When you are finished with yoru assignment, knit the file again!  If your document successfully knit without error, you are ready to submit your assignment through Github.  To do so, follow the steps below.  (If your document didn't successfully knit, please reach out to me over email at `phbiostats@jhu.edu` so I can help you trouble-shoot the issue.)
 
 * First you need to **commit** the changes you've made to the document.  Click the colorful Git button at the top of the RStudio window and select "Commit" from the menu.
-* In the window that opens, **stage** your changes by clicking the check boxes next to the `Mini0-1.Rmd` and `Mini0-1.html` files.
+* In the window that opens, **stage** your changes by clicking the check boxes next to the `Mini2-1.Rmd` and `Mini2-1.html` files.
 * In the "Commit message" box, type a short description of what changes you've made, something like: `Completed assignment`
 * Click the "Commit" button on the bottom right.
 * You'll see a window that will tell you about the changes that you've made.  Click "Close" to close the window.  You've successfully committed! You can close this commit window now.
