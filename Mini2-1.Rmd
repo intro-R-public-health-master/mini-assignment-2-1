@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Due Sunday, September 27 @ 11:59pm through Github**
+**Due Monday, September 27 at the end of class through Github**
 
 Your next assignment is to practice the first 4 `dplyr` functions so that you are comfortable using them.  See how many of these different tasks you can complete in your max 1 hour of work on this assignment.  For the first set of tasks, I will tell you which functions to use.  For the second set of tasks, you must determine the right function yourself!
 
@@ -94,7 +94,7 @@ load("nmes2018.rda")
 ```
 
 
-(5) Complete the tasks below:
+(5) Complete the tasks below.  There may be more than one way to complete these tasks in R, so choose a way that makes sense to you.
 
 * Find all individuals who have a major smoking-caused disease.
 ```{r}
