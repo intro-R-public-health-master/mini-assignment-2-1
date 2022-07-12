@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Due Monday, September 27 at the end of class through Github**
+**Due Thursday, September 22 through Github**
 
 Your next assignment is to practice the first 4 `dplyr` functions so that you are comfortable using them.  See how many of these different tasks you can complete in your max 1 hour of work on this assignment.  For the first set of tasks, I will tell you which functions to use.  For the second set of tasks, you must determine the right function yourself!
 
@@ -122,7 +122,7 @@ load("nmes2018.rda")
 ```
 
 
-(6) When you are finished with yoru assignment, knit the file again!  If your document successfully knit without error, you are ready to submit your assignment through Github.  To do so, follow the steps below.  (If your document didn't successfully knit, please reach out to me over email at `phbiostats@jhu.edu` so I can help you trouble-shoot the issue.)
+(6) When you are finished with your assignment, knit the file again!  If your document successfully knit without error, you are ready to submit your assignment through Github.  To do so, follow the steps below.  (If your document didn't successfully knit, please reach out to me over email at `phbiostats@jhu.edu` so I can help you trouble-shoot the issue.)
 
 * First you need to **commit** the changes you've made to the document.  Click the colorful Git button at the top of the RStudio window and select "Commit" from the menu.
 * In the window that opens, **stage** your changes by clicking the check boxes next to the `Mini2-1.Rmd` and `Mini2-1.html` files.
